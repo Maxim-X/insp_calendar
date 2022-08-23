@@ -1,0 +1,508 @@
+@import "fonts.css";
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #FFFFFF;
+    margin: 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+}
+
+
+section#insp {
+    display: grid;
+    grid-template-columns: 88px auto;
+}
+
+.left-section {
+    grid-column: 1;
+    height: 100vh;
+    border-right: 1px solid #DBDADA;
+    box-shadow: inset -9px 0px 16px 0px rgb(0 0 0 / 10%);
+    text-align: center;
+    padding-top: 40px;
+}
+
+.right-section {
+    grid-column: 2;
+    padding: 48px 48px 10px 48px;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.top-menu {
+    display: grid;
+    grid-template-columns: max-content auto max-content max-content;
+}
+
+.top-menu_name-company {
+    grid-column: 3;
+    line-height: 28px;
+}
+
+.top-menu_back {
+    line-height: 28px;
+}
+
+.top-menu_back span {
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #999999;
+    margin: 0px 0px 0px 16px;
+    font-size: 16px;
+}
+
+.top-menu_back img {
+    margin-bottom: -3px;
+}
+.calendar {
+    position: sticky;
+    top: 0;
+}
+.top-menu_name-company span {
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #353535;
+    margin: 0px 40px 0px 8px;
+    font-size: 16px;
+}
+
+.top-menu_name-company img {
+    margin-bottom: -8px;
+}
+
+.top-menu_shop-info span {
+    background: #E31243;
+    color: white;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 50%;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.top-menu_shop-info img {
+    margin-bottom: -3px;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 36px 62% 42px 30%;
+}
+
+.main-section .main-section_left {
+    grid-column: 2;
+}
+
+h1.main-section_title {
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #353535;
+    font-size: 22px;
+    line-height: 30px;
+    margin: 0px;
+}
+
+.all-month {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all-month_item {
+    color: #999999;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.all-month_item.active {
+    color: #128BE3;
+}
+
+.all-month_item:hover {
+    /* color: #a5a5a5; */
+    text-decoration: underline;
+}
+
+.all-month_item.active:hover {
+    text-decoration: dashed;
+}
+
+.free-seats p {
+    color: #06C270;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: right;
+    margin: 17px 0px 20px 0px;
+}
+
+.main-section_right {
+    grid-column: 4;
+    margin-top: 50px;
+}
+
+button.add-user {
+    font-size: 14px;
+    background: #E31243;
+    border: none;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+button.del-all-users {
+    font-size: 14px;
+    background: #e3124300;
+    border: none;
+    color: #E31243;
+    padding: 9px 15px;
+    border-radius: 4px;
+    font-weight: 600;
+    line-height: 24px;
+    border: 1px solid #E31243;
+    cursor: pointer;
+}
+
+.button-bar_edit-user {
+    display: grid;
+    flex-wrap: wrap-reverse;
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    grid-gap: 16px;
+}
+
+button.del-all-users img {
+    margin-right: 8px;
+    margin-bottom: -2px;
+}
+
+button.add-user:hover {
+    background: #cb1640;
+}
+
+button.del-all-users:hover {
+    background: rgb(227 18 67 / 15%);
+}
+
+.main-calendar tr.days td {
+    font-family: "PF DinDisplay Pro", sans-serif;
+}
+
+.main-calendar tbody tr td {
+    background: #ffffff;
+    vertical-align: baseline;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-family: 'PF DinDisplay Pro', sans-serif;
+    color: #353535;
+}
+
+.main-calendar table {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed
+}
+
+.main-calendar tr.days {
+    height: 0px;
+}
+
+.main-calendar tr.days td {
+    background: none;
+    padding: 4px 0px;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #353535;
+}
+
+.main-calendar tbody, tbody tr td {
+    border: 1px solid #DBDADA;
+    border-collapse: collapse;
+}
+
+.main-calendar tr.days td {
+    border: none;
+}
+
+.main-calendar table thead {
+    border: 1px solid #ffffff00;
+}
+
+.main-calendar tr.days th {
+    vertical-align: baseline;
+    padding: 4px 0px;
+    font-size: 14px;
+    color: #353535;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 400;
+    text-align: left;
+}
+
+.main-calendar tbody tr td.not-current {
+    background: #F9F9F9!important;
+/* gray+60white */
+    color: #999999;
+}
+
+.available {
+    color: #06C270;
+    margin-top: 13px;
+}
+
+.all-users_table_head {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    border-bottom: 1px solid #DBDADA;
+    padding: 8px 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    color: #999999;
+    font-size: 14px;
+}
+
+.all-users_title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    margin-bottom: 16px;
+}
+
+.all-users_title h2 {
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #353535;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.all-users_title p {
+    font-family: "PF DinDisplay Pro", sans-serif;
+    color: #128BE3;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0px;
+}
+
+.department-name {
+    display: grid;
+    grid-template-columns: max-content max-content max-content auto max-content;
+    padding: 15px 0px;
+}
+
+.department-name p {
+    margin: 0px;
+    grid-column: 2;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #353535;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.department-name .dep-arrow {
+    grid-column: 5;
+    padding: 0px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.department-name .dep-arrow:hover {
+    background: #c9e8ff;
+}
+.department-name span {
+    margin: 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-weight: 500;
+    color: #E31243;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.department_user {
+    display: grid;
+    grid-template-columns: 25px 55% auto 11px;
+    padding: 15px 0px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #DBDADA;
+    cursor: pointer;
+}
+
+.department_user label img {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.department_user .name {
+    margin: 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    color: #353535;
+    font-size: 16px;
+}
+
+.department_user .date {
+    margin: 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    color: #353535;
+    font-size: 16px;
+    text-align: center;
+    text-align: left;
+}
+
+.department_user:hover {
+    background: #F2F2F2;
+}
+
+.department_user label {}
+
+.func-del {
+    display: none;
+    width: 11px;
+    margin-top: 2px;
+}
+
+.department_user:hover .func-del {
+    display: block;
+}
+
+label.dep-arrow.active {
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg); 
+    -webkit-transform: rotate(0deg); 
+    -o-transform: rotate(0deg); 
+    transform: rotate(0deg);
+}
+
+label.dep-arrow:not(.active) {
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.function-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.function-bar .info {
+    display: flex;
+}
+
+.info_item p {
+    margin: 0px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+}
+
+p.info_item_title {
+    color: #999999;
+    font-size: 14px;
+}
+
+p.info_item_num {
+    color: #353535;
+    font-size: 21px;
+    margin-top: 2px;
+}
+
+.info .info_item:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+.info .info_item {
+    margin-right: 20px;
+}
+
+.info .info_item:nth-child(2) .info_item_num {
+    color: #128BE3;
+}
+
+.info .info_item:nth-child(3) .info_item_num {
+    color: #06C270;
+}
+
+.function-bar .buttons div {
+    background: #128BE3;
+    line-height: 44px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    color: white;
+    font-weight: 500;
+    padding: 0px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.function-bar .buttons {
+    display: flex;
+}
+
+.function-bar .buttons div.distribute_auto {
+    margin-right: 16px;
+}
+
+.function-bar .buttons div.save {
+    background: #E31243;
+    cursor: pointer;
+}
+
+.function-bar .buttons div.save:hover {
+    background: #cb1640;
+}
+
+.function-bar .buttons div.distribute_auto:hover {
+    background: #127cc9;
+}
+
+.orange.available {
+    color: #FF8800;
+}
+
+.add-new-user {
+    border: 2px dashed #E31243;
+    margin-top: 65px;
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-items: stretch;
+    align-items: baseline;
+}
+
+.add-new-user input, select {
+    border: 1px solid #128BE3;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: "PF DinDisplay Pro", sans-serif;
+    font-size: 14px;
+}
+
+@media (max-width: 991.98px) {
+    .function-bar {
+        display: grid;
+    }
+    .main-section {
+        grid-gap: 1px;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+    }
+
+    .main-section .main-section_left {
+        grid-column: none;
+    }
+
+    .main-section_right {
+        grid-column: none;
+    }
+}

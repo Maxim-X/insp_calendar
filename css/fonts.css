@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('PFDinDisplayPro-Medium.eot');
+    src: local('PFDinDisplayPro-Medium'),
+        url('PFDinDisplayPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PF DinDisplay Pro';
+    src: url('PFDinDisplayPro-Regular.eot');
+    src: local('PFDinDisplayPro-Regular'),
+        url('PFDinDisplayPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
